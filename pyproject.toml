@@ -1,0 +1,19 @@
+[project]
+name = "mesa-usb"
+version = "0.1.0"
+description = "Mesa digitalizadora USB para Android e Linux"
+requires-python = ">=3.10"
+dependencies = [
+    "evdev>=1.9.3,<3; sys_platform == 'linux'",
+    "fastapi>=0.115,<1",
+    "python-dotenv>=1.2.4",
+    "uvicorn>=0.34,<1",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+module-name = "src"

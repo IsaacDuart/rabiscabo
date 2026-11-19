@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mesa USB</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/pad.js"></script>
+</head>
+<body>
+  <main>
+    <div id="pad" role="region" aria-label="Superfície de desenho">
+      <canvas id="ink" aria-hidden="true"></canvas>
+      <span id="cursor" hidden></span>
+    </div>
+  </main>
+  <header>
+    <p id="status" role="status">Conectando…</p>
+    <button id="fullscreen" type="button" hidden>Tela cheia</button>
+  </header>
+  <div id="tools" role="group" aria-label="Controles da mesa">
+    <button id="navigate" type="button" aria-pressed="false">Modo navegação</button>
+    <button id="move-preview" type="button" aria-pressed="false">Mover prévia</button>
+    <button id="zoom-out" type="button" aria-label="Diminuir zoom">−</button>
+    <button id="zoom-in" type="button" aria-label="Aumentar zoom">+</button>
+    <button id="undo" type="button">Desfazer prévia</button>
+  </div>
+</body>
+</html>
